@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numberToGuess = Math.floor(Math.random() * 1000)
+
+        console.log('Я загадал:', numberToGuess)
+
+        const numberFromUser = prompt('Введите число (0 или 999):')
+
+        console.log('Вы ввели:', numberFromUser)
+
+        if (isNaN(numberFromUser) || (+numberFromUser < 0 ) || (+numberFromUser > 999)) {
+            alert('Вы ввели числа в не радиуса от 0 до 999')
+        } else if (numberFromUser == numberToGuess) {
+            alert('Вы угадали!')
+        } else if (numberFromUser < numberToGuess) {
+            alert('Вы не угадали число больше')
+        } else if (numberFromUser > numberToGuess) {
+            alert('Вы не угадали число меньше')
+        } 
+    </script>
+</body>
+</html>
